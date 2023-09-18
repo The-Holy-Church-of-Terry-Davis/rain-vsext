@@ -1,0 +1,19 @@
+include io;
+
+define Test;
+
+void myFunction(default) {
+    int x = 5;
+    // comment
+    /* block comment */
+}
+
+int main() {
+    int number = 123;
+    bool tf = true;
+    conout("fuck microsoft");
+}
+
+il {
+    CONOUT OR SOMETHING "ok"
+}

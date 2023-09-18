@@ -1,0 +1,79 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Rain",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{ "include": "#types" },
+		{ "include": "#scalars" },
+		{ "include": "#functions" },
+		{ "include": "#comments" }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.rain",
+					"match": "\\b(if|while|switch|public|static|void|case|default|this|for|return|fixed|unsafe|il|template|ref|params|define|include|struct|class)\\b"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{ 
+					"name": "keyword.types.rain",
+					"match": "\\b(int|long|short|byte|double|decimal|float|string|bool|null|void)\\b"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"match": "\\b(conout)\\b\\s*\\(",
+					"name": "support.function.rain"
+				}
+			]
+		},
+		"scalars": {
+			"patterns": [
+				{
+					"name": "constant.numeric.rain",
+					"match": "\\b[-+]?([0-9]*\\.[0-9]+|[0-9]+)\\b"
+				},
+				{ 
+					"name": "constant.boolean.rain",
+					"match": "\\b(true|false)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.rain",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.rain",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"begin": "/\\*",
+					"end": "\\*/",
+					"name": "comment.block.rain"
+				},
+				{ 
+					"name": "comment.line.rain",
+					"match": "//.*$"
+				}
+			]
+		}
+	},
+	"scopeName": "source.rn"
+}
